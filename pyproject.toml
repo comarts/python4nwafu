@@ -1,0 +1,44 @@
+[project]
+name = "python4nwafu"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "comarts", email = "comarts@163.com" }
+]
+requires-python = ">=3.13.9"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "matplotlib>=3.11.1",
+    "nbformat>=5.11.0",
+    "networkx>=3.6.1",
+    "numpy>=2.5.1",
+    "opencv-python>=5.0.0.93",
+    "pandas>=3.0.3",
+    "plotly>=6.9.0",
+    "pydantic>=2.13.4",
+    "pytest>=9.1.1",
+    "rich>=15.0.0",
+    "ruff>=0.16.1",
+    "scikit-learn>=1.9.0",
+    "sympy>=1.14.0",
+    "torch>=2.13.0",
+    "transformers>=5.14.1",
+]
+
+[project.scripts]
+python4nwafu = "python4nwafu:main"
+
+[build-system]
+requires = ["uv_build>=0.11.1,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 88
+[tool.ruff.lint]
+select = ["A", "B", "C", "D", "E", "F", "I", "N", "Q", "R", "S", "U", "W", "BLE"]
+ignore = ["D203", "D213"]
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = 'single'
+docstring-quotes = "double"
